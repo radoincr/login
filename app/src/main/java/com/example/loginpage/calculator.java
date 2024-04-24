@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.loginpage.R;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.loginpage.R;
@@ -107,6 +111,22 @@ public class calculator extends AppCompatActivity {
                 re.setText("");
             }
         });
+        findViewById(R.id.btnOpenParenthesis).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                re.setText(re.getText().toString()+"(");
+            }
+        });
+
+        findViewById(R.id.btnCloseParenthesis).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                re.setText(re.getText().toString()+")");
+            }
+        });
+
+        // Other button click listeners...
+
 
         findViewById(R.id.btnre).setOnClickListener(new View.OnClickListener() {
             @Override
